@@ -71,12 +71,57 @@
 </div>
 </div>
 </header>
+        <div id="servicesbanner">
+        <img src="images/services/banner/servicebanner.jpg" alt="banner"  width="100% " >
+        <h1>
+            Service
+        </h1>
+        <p>
+            We also offer other services for your car. Small its shy way had woody downs power. <br>
 
+            To denoting admitted speaking learning my exercise so in. Procured shutters mr it feelings. To or three offer house begin taken am at.
+        </p>
+      </div>
+      <div class="container">
+          <div class="services_content">
+              <div class="service">
+              <div class="service_text">
+                  <h1>Brake repair</h1>
+                  <p>
+                    From the brake pedal to hydraulic <BR> brake fluid, brake master cylinder to <BR> power brake booster, drum brakes to <BR> disc brakes and electronic.
+                  </p>
+                  <ul>
+                  <li>Brake repair</li>
+                  <li>Changing rotor kits</li>
+                  <li>Sensor repair</li> 
+                  </ul>
+                  </div>
+                  <div class="serviceimg">   
+                 <img src="images/services/parts/brakes.png" alt="" width="180px">
+              </div>
+              </div>
 
-<!-- CODE HERE-->
-
-<?php
+              <div class="service">
+            <div class="serviceimg">   
+                <img src="images/services/parts/tires.png" alt="" width="200px">
+             </div>
+             <div class="service_text">
+                <h1>Tyres</h1>
+                <p>
+                    Selecting the right set of tyres for <br> your car can have a significant <br> impact on your car’s characteristics, <br> having an influence on braking <br> distances.                </p>
+                <ul>
+                <li>Summer tyres</li>
+                <li>Winter tyres</li>
+                <li>Runflat tyres</li>
+                </ul>
+                </div>
+             </div>
+          </div>
+        </div>
+    </div>
+  <?php
   include 'includes/footer.php';
   ?>
      </body>
    </html>
+    </header>
