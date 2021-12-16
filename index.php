@@ -72,9 +72,73 @@
 </div>
 </header>
 
-
 <!-- MAIN CODE HERE!! -->
+<main>
+<div id="banner" class="slider">
+      <img src="images/index/banner/banner2.jpg" alt="banner2" width=100%>
+      <img src="images/index/banner/banner1.jpg" alt="banner" width=100%>
+      <img src="images/index/banner/banner3.jpg" alt="banner3" width=100%>
+      </div>
+<div class="container">
+<div class="banner-text" style="position: absolute;
+    top: 30%;
+    ">
+       <h1 style="color: white">
+        Electrit Performance, <br />
+        the facelifted Tesla Roadster
+       </h1>
+       <br>
+       <p style="color: white;
+       padding-bottom: 5%;
+       ">
+        -Mobile connector with 240 volt. <br />
+        -17" capacitive touchscreen <br />
+        -Soft LED ambient interior lighting
+        </p>
+        <br>
+        <a href="tesla.php" id="red_button">PRE-ORDER NOW</a>
+    </div>
+    <div id="optform">
+      <h2>Choose a car</h2>
+      <p>Filter by brand, budget or by kilometers.</p>
+      <a href="cars.html
+      ">SHOW PRODUCTS</a>
+      <br>
+      <br>
+      <form action="" id="selectionform">
+      <select name="category" id="category">
+        <option value="category"  disabled selected hidden>Category</option>
+        <option value="hybrid-electric">Hybrid-Electric</option>
+        <option value="sport">Sport</option>
+        <option value="truck">Truck</option>
+        <option value="small">Small</option>
+        <option value="motorcycle">Motorcycle</option>
+        <option value="sedan">Sedan</option>
+        <option value="SUV">SUV</option>
+      </select>
+      <select name="brand" id="brand">
+        <option value="brand" disabled selected hidden>Brand</option>
+        <option value="landrover">Land Rover</option>
+        <option value="alfaromeo">Alfaromeo</option>
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="peugeot">Peugeot</option>
+        <option value="jeep">Jeep</option>
+        <option value="suzuki">Suzuki</option>
+      </select>
+      <select name="price" id="price">
+        <option value="price" disabled selected hidden>Price</option>
+        <option value="1000-5000">1,000 - 5,000	&#128</option>
+        <option value="5000-10000">5,000 - 10,000	&#128</option>
+        <option value="10000-15000">10,000 - 15,000	&#128</option>
+        <option value="15000-20000">15,000 - 20,000	&#128</option>
+        <option value="20000-25000">20,000 - 25,000	&#128</option>
+        <option value="25000-3000">25,000 - 30,000	&#128</option>
+        </form>
+    </div>
 
+    
 <?php
   include 'includes/footer.php';
   ?>
