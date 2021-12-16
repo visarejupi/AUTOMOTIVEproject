@@ -138,11 +138,46 @@
         </form>
     </div>
 
-    
+    <div class="terms">
+    <div class="terms_items"> 
+    <img src="images/terms/talk.png" alt="Offer picture" title="Offer Image" width="20px">
+    <h3>We make you an offer</h3>
+    <p>With the best selection of cars you’re looking for. You pick the one you like best, thanks to our advice and car chooser.</p>
+    </div>
+
+    <div class="terms_items"> 
+    <img src="images/terms/terms.png" alt="Offer picture" title="Offer Image" width="20px">
+    <h3>You check the terms</h3>
+    <p>We show you offers from based on your requirements. You pick the one you like best. It’s all on your terms.</p>
+    </div>
+
+    <div class="terms_items"> 
+    <img src="images/terms/handshake.png" alt="Offer picture" title="Offer Image" width="20px">
+    <h3>Choose what is right for you</h3>
+    <p>The price you see is the price you pay – you just choose which is right for you and and we’re ready. We wish you a safe drive.</p>
+    </div>
+  </div>
+
+</div>
+
+</main>    
 <?php
   include 'includes/footer.php';
   ?>
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
 
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2200
+
+      });
+    });
+  </script>
 
 <!-- SLIDER CODE HERE!! -->
 
