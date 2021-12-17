@@ -351,3 +351,120 @@ footer {
 #passError {
   margin-bottom: 15px;
 }
+/*SERVICES PART */
+#servicesbanner img {
+  margin-top: 4%;
+  width: 100%;
+  height: 300px !important;
+  position: relative;
+}
+#servicesbanner h1,
+#servicesbanner p {
+  position: absolute;
+  top: 20%;
+  left: -7%;
+  color: white;
+  padding-left: 250px;
+}
+#servicesbanner p {
+  padding-top: 45px;
+  color: #919191;
+}
+.services_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.services_content li,
+.services_content p {
+  color: #787878;
+  font-weight: 300;
+}
+.services_content li {
+  text-indent: 20px;
+  list-style: none;
+}
+.services_content p {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.serviceimg {
+  padding: 0 35px;
+}
+.service {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: row;
+}
+.service_text > h1 {
+  border-bottom: 3px solid #e32636;
+}
+/*CONTACT FORM PART */
+
+.iframe {
+  margin-top: 5.6%;
+}
+.contactform {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.contactform p {
+  font-weight: 300;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+input,
+textarea {
+  margin: 4px 0px;
+}
+.contactform input[type='email'],
+.contactform input[type='text'],
+.contactform textarea {
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 15px;
+  font-size: 14px;
+}
+.contactform input[type='submit'] {
+  width: 150px;
+  background-color: #212121;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 14px;
+
+  padding: 10px 20px;
+}
+.contactform input[type='submit']:hover {
+  background-color: #16161d;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.informtaion ul {
+  padding: 25px 0;
+  list-style: none;
+  font-size: 14px;
+}
+.informtaion li {
+  font-size: 14px;
+}
+
+.informtaion h3 {
+  padding-top: 20px;
+  font-size: 14px;
+}
+.informtaion {
+  padding: 30px 0;
+  padding-left: 100px;
+}
