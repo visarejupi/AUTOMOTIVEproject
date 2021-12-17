@@ -468,3 +468,183 @@ textarea {
   padding: 30px 0;
   padding-left: 100px;
 }
+/* CARS PART */
+.carstitle {
+  padding: 45px 0 7px 0;
+  font-size: 18px;
+}
+
+.carsp {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 0 0 45px 0;
+}
+#products li {
+  list-style: none;
+}
+#products {
+  display: flex;
+  padding-bottom: 5%;
+}
+.aside {
+  background-color: white;
+  padding: 15px 15px;
+  border-radius: 5px;
+}
+
+.aside img {
+  padding-right: 15px;
+}
+aside {
+  margin-top: 0;
+  font-weight: 300;
+  color: #787878;
+}
+#categories {
+  padding-bottom: 25px;
+}
+#categories li {
+  padding: 5px 15;
+  display: flex;
+  margin-top: 5%;
+  justify-content: left;
+}
+#categories li a {
+  display: flex;
+  justify-content: center;
+  padding: 1.5px 1.5px;
+}
+.aside li a,
+.aside label {
+  font-size: 13px;
+}
+.title {
+  padding: 7px 5px 10px 5px;
+  font-weight: 300;
+  border-bottom: 1px solid #e32636;
+}
+#fuel {
+  margin: 10% 0;
+  padding-bottom: 25px;
+}
+#fuel li {
+  list-style: none;
+  padding: 5px 15;
+}
+#fuel > li {
+  margin-top: 15px;
+}
+#fuel label {
+  padding-right: 25px;
+}
+#f {
+  margin-right: 4px;
+}
+#doors {
+  margin: 10% 0;
+  padding-bottom: 25px;
+}
+#doors li {
+  list-style: none;
+  margin-top: 5%;
+}
+#doors label {
+  padding-right: 25px;
+}
+#transmission {
+  margin: 10% 0;
+  padding-bottom: 25px;
+}
+#transmission li {
+  list-style: none;
+  margin-top: 5%;
+}
+#transmission label {
+  padding-right: 25px;
+}
+#drivetrain {
+  margin: 10% 0;
+  padding-bottom: 25px;
+}
+#drivetrain li {
+  list-style: none;
+  margin-top: 5%;
+}
+#drivetrain label {
+  padding-right: 25px;
+}
+#categories li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-right: 2px solid #e32636;
+}
+
+#fuel li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#doors li,
+#transmission li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#drivetrain li label,
+#doors li label,
+#transmission li label {
+  padding-left: 5px;
+}
+#drivetrain li {
+  display: flex;
+  flex-direction: row;
+}
+#cars img {
+  width: 270px;
+  border-radius: 5px;
+}
+#cars {
+  font-size: 15px;
+  margin: auto 0;
+  width: 100%;
+}
+#cars > #box {
+  width: 270px;
+  margin: 10px 10px;
+}
+#cars h2 {
+  width: 40%;
+}
+.box {
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.box h2 {
+  background-color: #e32636;
+  color: white;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.box h1 {
+  padding: 5px 0px 5px 10px;
+  font-size: 16px;
+}
+.box p {
+  padding: 0px 0px 5px 10px;
+  font-size: 14px;
+}
+.box:hover {
+  box-shadow: 1px 1px 50px -24px #5e5e5e;
+  transition: 0.5s;
+}
+.cardeals_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10px auto;
+  position: relative;
+  text-align: left;
+}
