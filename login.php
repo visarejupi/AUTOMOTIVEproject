@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AUTOMOTIVE</title>
+    <link rel="stylesheet" href="js/loginValidate.js">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -71,3 +72,23 @@
 </div>
 </div>
 </header>
+<main>
+  <div class="login">
+  <div class="container"> 
+  <form class="login_form" name="form" onsubmit="return validated()" >  
+    <div class="form_container">
+      <h1>Log in</h1> 
+      <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  
+      <p id="nameError"></p>
+      <input autocomplete="off" type="password" placeholder="Password" name="password" id="password" >  
+      <p id="passError"></p>
+      <button type="submit" class="success">Login</button>   
+      <p>Don't have an account? <a href="signup.php"> Create one </a>  </p> 
+      </div>
+     </form> 
+     <script src="js/loginValidate.js"></script>
+    </div>   
+  </div>
+</main>
+</body>
+</html>
