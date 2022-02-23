@@ -66,6 +66,7 @@
       <?php
       $page = 'cars';
       include ('includes/header.php');
+      include ('includes/db.php');
       ?>
    </ul>
 </div>
@@ -144,80 +145,28 @@
 </aside>
 <section>
   <div class="cardeals_container" id="cars">
+<?php
+try {
+  $stmt = $conn->prepare("SELECT cars.name, cars.price, car_types.name as 'car_type', cars.picture_location, cars.date_posted, users.name as 'posted_by' FROM `cars` left join `car_types` on cars.car_type = car_types.id left join `users` on users.id=cars.posted_by");
+  $stmt->execute();
+
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  foreach($stmt as $car_list=>$car_listing) {
+    ?>
     <div class="box"  id="box">
-      <img src="images/cars/carpictures/alfaromeo.jpg" alt="">
-      <h2>31,000	&#128;</h2>
-      <h1>Alfa Romeo Giulia</h1>
-      <p>Sedan</p>
-    </div>
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/audia1.jpg" alt="">
-      <h2>23,000	&#128;</h2>
-      <h1>Audi A1</h1>
-      <p>Small</p>
-    </div>    
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/audia4.jpg" alt="">
-        <h2>39,000	&#128;</h2>
-        <h1>Audi A4</h1>
-        <p>Sedan</p>
-      </div> 
-      <div class="box" id="box">
-        <img src="images/cars/carpictures/audia4allroad.jpg" alt="">
-        <h2>42,000	&#128;</h2>
-      <h1>Audi A4 Allroad</h1>
-      <p>Estate</p>
-    </div>   
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/bmw4.jpg" alt="">
-      <h2>37,000	&#128;</h2>
-      <h1>BMW 4</h1>
-      <p>Hatchback</p>
-    </div>
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/bmw7.jpg" alt="">
-      <h2>69,000	&#128;</h2>
-      <h1>BMW 7</h1>
-      <p>Sedan</p>
-    </div>
-    <div class="box"  id="box">
-      <img src="images/cars/carpictures/fordfiesta.jpg" alt="">
-      <h2>9,000	&#128;</h2>
-      <h1>Ford Fiesta</h1>
-      <p>Small, Hatchback</p>
-    </div>
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/insigna.jpg" alt="">
-      <h2>19,115	&#128;</h2>
-      <h1>Vauxhall Insignia</h1>
-      <p>Sedan</p>
-    </div>    
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/jaguar.jpg" alt="">
-        <h2>54,900	&#128;</h2>
-        <h1>Jaguar XJ R</h1>
-        <p>Sport, Sedan</p>
-      </div> 
-      <div class="box" id="box">
-        <img src="images/cars/carpictures/peugeot508.jpg" alt="">
-        <h2>25,340	&#128;</h2>
-      <h1>Peugeot 508 SW</h1>
-      <p>Sedan</p>
-    </div>   
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/polo.jpg" alt="">
-      <h2>12,000	&#128;</h2>
-      <h1>VW Polo</h1>
-      <p>Small</p>
-    </div>
-    <div class="box" id="box">
-      <img src="images/cars/carpictures/suzuki.jpg" alt="">
-      <h2>14,000	&#128;</h2>
-      <h1>Suzuki Ignis</h1>
-      <p>Small</p>
-    </div>
-    
-    </div>
+      <img src="<?php echo $car_listing["picture_location"]; ?>" alt="">
+      <h2><?php echo $car_listing["price"]; ?>	&#128;</h2>
+      <h1><?php echo $car_listing["name"]; ?></h1>
+      <p><?php echo $car_listing["car_type"]; ?></p>
+    </div> 
+    <?php
+  } 
+} catch(PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
+?>
+  </div>
 </section>
 </div>
 

@@ -1,0 +1,49 @@
+
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/bmw4.jpg" alt="">
+      <h2>37,000	&#128;</h2>
+      <h1>BMW 4</h1>
+      <p>Hatchback</p>
+    </div>
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/bmw7.jpg" alt="">
+      <h2>69,000	&#128;</h2>
+      <h1>BMW 7</h1>
+      <p>Sedan</p>
+    </div>
+    <div class="box"  id="box">
+      <img src="images/cars/carpictures/fordfiesta.jpg" alt="">
+      <h2>9,000	&#128;</h2>
+      <h1>Ford Fiesta</h1>
+      <p>Small, Hatchback</p>
+    </div>
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/insigna.jpg" alt="">
+      <h2>19,115	&#128;</h2>
+      <h1>Vauxhall Insignia</h1>
+      <p>Sedan</p>
+    </div>    
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/jaguar.jpg" alt="">
+        <h2>54,900	&#128;</h2>
+        <h1>Jaguar XJ R</h1>
+        <p>Sport, Sedan</p>
+      </div> 
+      <div class="box" id="box">
+        <img src="images/cars/carpictures/peugeot508.jpg" alt="">
+        <h2>25,340	&#128;</h2>
+      <h1>Peugeot 508 SW</h1>
+      <p>Sedan</p>
+    </div>   
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/polo.jpg" alt="">
+      <h2>12,000	&#128;</h2>
+      <h1>VW Polo</h1>
+      <p>Small</p>
+    </div>
+    <div class="box" id="box">
+      <img src="images/cars/carpictures/suzuki.jpg" alt="">
+      <h2>14,000	&#128;</h2>
+      <h1>Suzuki Ignis</h1>
+      <p>Small</p>
+    </div>

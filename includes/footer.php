@@ -50,3 +50,5 @@
     </div>
   </div>
   </footer>
+  
+  <?php $conn = null; ?>
