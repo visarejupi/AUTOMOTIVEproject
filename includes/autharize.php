@@ -1,16 +1,9 @@
 <?php
 if (isset($_COOKIE["username"]) && isset($_COOKIE["pass_hash"])) {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "automotive";
-
     $name = $_COOKIE["username"];
     $pass_hash = $_COOKIE["pass_hash"];
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conn->prepare("SELECT salted_hash, privileges FROM users WHERE name='$name'");
         $stmt->execute();
 
@@ -30,7 +23,6 @@ if (isset($_COOKIE["username"]) && isset($_COOKIE["pass_hash"])) {
         echo "Error: " . $e->getMessage();
         $privileges = 3;
     }
-    $conn = null;
 }
 else {
     $privileges = 3;
