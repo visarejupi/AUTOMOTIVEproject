@@ -4,8 +4,8 @@ $username = "root";
 $password = "";
 $dbname = "automotive";
 
-$name = "Nderim";
-$hash = hash("sha256", "password", false);
+$name = $_GET["username"];
+$user_password = $_GET["password"];
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -22,11 +22,17 @@ try {
 }
 $conn = null;
 
-$salted_hash_from_request = hash("sha256", $hash.$salt, false);
+$salted_hash_from_request = hash("sha256", $user_password.$salt, false);
 
 if ($salted_hash == $salted_hash_from_request) {
     echo "Access Granted!";
+    setcookie("username", $name, time() + (86400), "/");
+    setcookie("pass_hash", hash("sha256", $salted_hash, false), time() + (86400), "/");
+
+    header('Location: '."/index.php");
 } else {
     echo "Access Denied.";
 }
+
+exit()
 ?>

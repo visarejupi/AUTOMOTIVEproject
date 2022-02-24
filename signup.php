@@ -73,7 +73,7 @@
 </header><main>
   <div class="login">
   <div class="container"> 
-  <form class="signup_form" name="signup_form" action="" onsubmit="return validated()" >  
+  <form class="signup_form" name="signup_form" action="/register.php">  
     <div class="form_container">
       <h1>Sign up</h1> 
       <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  

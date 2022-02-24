@@ -4,12 +4,11 @@ $username = "root";
 $password = "";
 $dbname = "automotive";
 
-
-$name = "Nderim";
-$email = "nx35602@ubt-uni.net";
-$hash = hash("sha256", "password", false);
+$name = $_GET["username"];
+$email = $_GET["email"];
+$user_password = $_GET["password"];
 $salt = base64_encode(random_bytes(10));
-$salted_hash = hash("sha256", $hash.$salt, false);
+$salted_hash = hash("sha256", $user_password.$salt, false);
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
@@ -24,4 +23,10 @@ try {
 }
 
 $conn = null;
+
+// create a cookie
+
+header('Location: '."/index.php");
+
+exit();
 ?>

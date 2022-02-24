@@ -66,7 +66,6 @@
       <?php
       $page = 'cars';
       include ('includes/header.php');
-      include ('includes/db.php');
       ?>
    </ul>
 </div>

@@ -57,4 +57,6 @@ switch ($page) {
     default:
     	
 }
+include ('includes/db.php');
+include ('includes/autharize.php');
 ?>

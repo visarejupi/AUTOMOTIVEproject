@@ -75,7 +75,7 @@
 <main>
   <div class="login">
   <div class="container"> 
-  <form class="login_form" name="form" onsubmit="return validated()" >  
+  <form class="login_form" name="form" action="./authenticate.php" >  
     <div class="form_container">
       <h1>Log in</h1> 
       <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  

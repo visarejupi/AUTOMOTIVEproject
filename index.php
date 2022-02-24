@@ -83,6 +83,14 @@
 <div class="banner-text" style="position: absolute;
     top: 30%;
     ">
+    <?php
+if ($privileges==0) {
+  echo "<h2>You are the Admin</h2>";
+}
+else if ($privileges==1) {
+  echo "<h2>You are ".$name."</h2>";
+}
+?>
        <h1 style="color: white">
         Electrit Performance, <br />
         the facelifted Tesla Roadster

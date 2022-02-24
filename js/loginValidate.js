@@ -35,4 +35,3 @@ function pass_Verify() {
     return true;
   }
 }
-alert('Logged in successfully!');
