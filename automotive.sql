@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2022 at 07:37 PM
+-- Generation Time: Feb 26, 2022 at 01:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -91,8 +91,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `salted_hash`, `salt`, `privileges`) VALUES
-(0, 'admin', 'admin@automotive.com', '8h6wet87m98dse567s85', 'muyi0kzs11256y459', 0),
-(7, 'Nderim', 'nx35602@ubt-uni.net', '6502698739deae8b4352fbb6bb3632c43dc6b23027a72930c8d1cb6a74f43036', 'CBvfn0i6j7MaiA==', 1);
+(0, 'admin', 'admin@automotive.com', 'cd6057569b78847b0b121b02fde617ad2d016183c378ebac3d765193c3a13f39', 'doZ0H28m9NcTtA==', 0),
+(7, 'nderim', 'nderim@ubt-uni.net', '6319a4f127671e64a037813639484dd1ffa882af3fe311f3d8d391cbe52c45ae', 'cPIJkFQ6I+ZQmw==', 1),
+(9, 'visar', 'visar@ubt-uni.net', '271f37408e7481c6e53eb3455d453f571e055aba5d9731578975dc6db08c5e3f', 'f4ob6BSl9xaWKg==', 1),
+(12, 'betim', 'betim@ubt-uni.net', 'a4e690413688cea0b3303ac8c3724fa2cfd28b9f66924eaa525587ac834aa85e', 'rZx/ODyX+7/Jkw==', 1);
 
 --
 -- Indexes for dumped tables
@@ -137,7 +139,7 @@ ALTER TABLE `car_types`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

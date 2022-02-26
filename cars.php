@@ -82,12 +82,30 @@
 <p class="carsp">Select the category, brand, color and set the specifics by yourself to get the car of your dreams.</p>
   <div id="products">
 <aside>
+  <ul class="aside" id="price_slider">
+  <h3 class="title">PRICE</h3>
+
+  <div class="slidecontainer">
+  <input type="range" min="10000" max="150000" value="75000" step="10000" class="slider_price" id="myRange">
+  </div>
+  <label for="myRange" id="demo"></label>
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = 'From <strong>10000€</strong> to <strong>' +slider.value + '€</strong>'; 
+
+    slider.oninput = function() {
+    output.innerHTML = 'From <strong>10000€</strong> to <strong>'+this.value+'€</strong>';
+}
+  </script>
+  </ul>
 <ul class="aside" id="categories">
   <h3 class="title">CATEGORIES</h3>
   <li><a><img src="images/cars/cartypes/MICRO.svg" alt="" width="45" style="height: 18px;">Small</a></li>
   <li><a><img src="images/cars/cartypes/HATCHBACK1.svg" alt="" width="45">Hatchback</a></li>
   <li><a><img src="images/cars/cartypes/MINIVAN1.svg" alt="" width="45">Minivan</aimg></li>
   <li><a><img src="images/cars/cartypes/CUV.svg" alt="" width="45">Estate</a></li>
+  <li><a><img src="images/cars/cartypes/SEDAN.svg" alt="" width="45">Sedan</a></li>
   <li><a><img src="images/cars/cartypes/SUPERCAR.svg" alt="" width="45">Sport</a></li>
   <li><a><img src="images/cars/cartypes/SUV1.svg" alt="" width="45">SUV</a></li>
 </ul>
@@ -169,6 +187,7 @@ try {
 </section>
 </div>
 
+</div>
 
 <?php
   include 'includes/footer.php';
