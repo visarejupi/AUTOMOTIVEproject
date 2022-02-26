@@ -42,7 +42,7 @@
      </div>
      <div class="mainfooter">
      <div class="left">    <p style="color: white;   font-size: 14px;
-">	&copy; Copyright 2021 | by Visar Ejupi</p>
+">	&copy; Copyright 2021 | by Visar Ejupi and Nderim Xhemajli</p>
      </div>
  <div class="right" >      <i class="fab fa-facebook" style="color: white;"><a href="www.facebook.com"></a></i>  
      <i class="fab fa-youtube" style="color: white;" ><a href="www.youtube.com"></a></i> 

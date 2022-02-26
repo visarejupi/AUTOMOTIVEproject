@@ -657,3 +657,92 @@ aside {
   position: relative;
   text-align: left;
 }
+/* PURCHASE PART */
+.car {
+  padding: 8px;
+  width: 50%;
+  float: left;
+  padding: 1%;
+}
+.car img {
+  float: right;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.1);
+}
+.cardetails {
+  float: right;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: left;
+  padding: 1%;
+}
+#purchase {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 4%;
+
+  background-color: white;
+  border-radius: 5px;
+}
+.cardetails h1 {
+  font-size: 32px;
+  padding-bottom: 25px;
+}
+.cardetails p {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 3px 0;
+}
+.cardetails_left {
+  width: 50%;
+  margin-right: 0.5%;
+}
+.cardetails_right {
+  width: 50%;
+}
+strong {
+  font-weight: 400;
+  font-size: 14px;
+}
+.cardetails button {
+  margin-bottom: 4%;
+  margin-top: 1%;
+  width: 30%;
+  padding: 5px 10px;
+  background-color: white;
+  color: #c72331;
+  border: 1px solid #c72331;
+  border-radius: 5px;
+}
+.cardetails button:hover {
+  color: white;
+  background-color: #c72331;
+}
+.carspecs {
+  display: flex;
+  flex-direction: row;
+}
+.carspecs p {
+  padding: 2px 7px 2px 7px;
+}
+#hirit {
+  background-color: #f0f0f0;
+}
+h3 {
+  font-weight: 450;
+  font-size: 20px;
+}
+#back {
+  float: right;
+  padding: 5px 10px;
+  margin-bottom: 4%;
+  text-decoration: none;
+  background-color: #c72331;
+  color: white;
+  border-radius: 5px;
+}
