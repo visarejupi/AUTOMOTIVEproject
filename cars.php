@@ -21,7 +21,7 @@ try {
   foreach($stmt as $car_list=>$car_listing) {
     $cars.="<div class=\"box\"  id=\"box\">
     <img src=\"".$car_listing["picture_location"]."\" alt=\"\">
-    <h2>".$car_listing["price"]."?>	&#128;</h2>
+    <h2>".$car_listing["price"]."	&#128;</h2>
     <h1>".$car_listing["name"]."</h1>
     <p>".$car_listing["car_type"]."</p>
     </div> ";
