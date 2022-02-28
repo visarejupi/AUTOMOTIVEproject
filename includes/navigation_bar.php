@@ -28,10 +28,18 @@ $dashboard="";
 if ($this->privileges == 0) {
       $dashboard = "<li><a $active_dashboard href=\"dashboard.php\">DASHBOARD</a></li>";
 }
+
+$login_out_button = "";
+if ($this->user == ""){
+      $login_out_button = "<li><a $active_login href=\"login.php\">LOG IN</a><i class=\"far fa-user user\"></i></li>";
+}
+else {
+      $login_out_button = "<li><a $active_login href=\"logout.php\">LOG OUT</a><i class=\"far fa-user user\"></i></li>";
+}
 echo "$dashboard
       <li><a $active_home href=\"index.php\">HOME</a></li>
       <li><a $active_cars href=\"cars.php\">CARS</a></li>
       <li><a $active_services href=\"services.php\">SERVICES</a></li>
       <li><a $active_contact href=\"contact.php\">CONTACT</a></li>
-      <li><a $active_login href=\"login.php\">LOG IN</a><i class=\"far fa-user user\"></i></li>";
+      $login_out_button";
 ?>
