@@ -1,0 +1,22 @@
+<main>
+    <div class="login">
+    <div class="container"> 
+    <form class="signup_form" name="signup_form" action="/register.php">  
+      <div class="form_container">
+        <h1>Sign up</h1> 
+        <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  
+        <p id="nameError"></p>
+        <input autocomplete="off" type="email" placeholder="Email" name="email" id="email" required >  
+        <p id="emailError"></p>
+        <input autocomplete="off" type="password" placeholder="Password" name="password" id="password" >  
+        <p id="passError"></p>
+        <input autocomplete="off" type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" >  
+        <p id="confirmpassError"></p>
+        <button type="submit" class="success" id="signup" name="signup">Sign up</button>   
+        </div>
+       </form> 
+       <script src="js/signUpValidate.js"></script>
+  
+      </div>   
+    </div>
+  </main>

@@ -1,15 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "automotive";
+include "includes/db.php";
 
 $name = $_GET["username"];
 $user_password = $_GET["password"];
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("SELECT salted_hash, salt FROM users WHERE name='$name'");
     $stmt->execute();
 
@@ -24,14 +19,21 @@ $conn = null;
 
 $salted_hash_from_request = hash("sha256", $user_password.$salt, false);
 
+if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
+    $uri = 'https://';
+} else {
+    $uri = 'http://';
+}
+$uri .= $_SERVER['HTTP_HOST'];
+
 if ($salted_hash == $salted_hash_from_request) {
     echo "Access Granted!";
     setcookie("username", $name, time() + (86400), "/");
     setcookie("pass_hash", hash("sha256", $salted_hash, false), time() + (86400), "/");
 
-    header('Location: '."/index.php");
+    header('Location: '.$uri."/index.php");
 } else {
-    echo "Access Denied.";
+    header('Location: '.$uri."/login.php");
 }
 
 exit()
