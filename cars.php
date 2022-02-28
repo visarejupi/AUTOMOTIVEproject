@@ -17,7 +17,6 @@ try {
   $stmt = $conn->prepare("SELECT cars.name, cars.price, car_types.name as 'car_type', cars.picture_location, cars.date_posted, users.name as 'posted_by' FROM `cars` left join `car_types` on cars.car_type = car_types.id left join `users` on users.id=cars.posted_by");
   $stmt->execute();
 
-  // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   foreach($stmt as $car_list=>$car_listing) {
     $cars.="<div class=\"box\"  id=\"box\">
