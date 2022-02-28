@@ -26,7 +26,7 @@ class site {
     public function render() {
         include $this->header;
         $this->page->render();
-        include $this->footer;
+        if ($this->footer != "") include $this->footer;
     }
 
     public function __destruct() {

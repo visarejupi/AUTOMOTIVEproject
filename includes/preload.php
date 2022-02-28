@@ -6,10 +6,9 @@ include "includes/db.php";
 $header = "includes/header.php";
 $footer = "includes/footer.php";
 
-$template_file_name = basename($_SERVER["REQUEST_URI"], ".php").".html";
-if ($template_file_name == "login.html" || $template_file_name == "signup.html") {
-    $footer="";
-}
+$template_file_name = explode(".", basename($_SERVER["REQUEST_URI"]))[0].".html";
+if ($template_file_name == "login.html" || $template_file_name == "signup.html") $footer="";
+if ($template_file_name == ".html") $template_file_name = "index.html";
 
 $site = new site($conn, $header, $footer);
 
