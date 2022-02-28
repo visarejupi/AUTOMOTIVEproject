@@ -2,12 +2,12 @@
 
 include "includes/preload.php";
 
-$feedback = "<table id=\"feedback\">
-<th>ID</th>
-<th>Name</th>
-<th>Email</th>
-<th>Subject</th>
-<th>Message</th>";
+if ($site->privileges > 0) {
+  header("Location: index.php");
+  exit();
+}
+
+$feedback = "";
 
 try {
   $stmt = $conn->prepare("SELECT * from contact_form LIMIT 10");
@@ -22,15 +22,11 @@ try {
       <td>".$contact_form['subject']."</td>
       <td>".$contact_form['message']."</td>
       </tr>";
-
   }
 }
 catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
-
-$feedback .= "</table>
-<br><br><br><br><br><br>";
 
 $dynamic_content["feedback"]=$feedback;
 

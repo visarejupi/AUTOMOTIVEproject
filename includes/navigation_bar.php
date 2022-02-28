@@ -24,7 +24,11 @@ switch ($_SERVER["REQUEST_URI"]) {
             $active_dashboard="class=\"active\"";
             break;  
 }
-echo "<li><a $active_dashboard href=\"dashboard.php\">DASHBOARD</a></li>
+$dashboard="";
+if ($this->privileges == 0) {
+      $dashboard = "<li><a $active_dashboard href=\"dashboard.php\">DASHBOARD</a></li>";
+}
+echo "$dashboard
       <li><a $active_home href=\"index.php\">HOME</a></li>
       <li><a $active_cars href=\"cars.php\">CARS</a></li>
       <li><a $active_services href=\"services.php\">SERVICES</a></li>
