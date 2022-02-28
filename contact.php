@@ -24,7 +24,7 @@
       src="https://kit.fontawesome.com/54319c4285.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="icon
     "
@@ -78,14 +78,17 @@
 <div class="container">
     <div class="form">
     <div class="contactform">
+    <form action="insert.php" method="post">
         <H1>Contact Us</H1>
         <p>Sign a partnership with us, drop us a letter.</p>
         <input type="text" name="name" id="name" placeholder="Name">
         <input type="email" name="email" id="email" placeholder="Email">
         <input type="text" name="subject" id="subject" placeholder="Subject">
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-        <input type="submit" name="SEND MESSAGE" id="submit" value="SEND MESSAGE">
+        <input type="submit" name="submit" id="submit" value="SEND MESSAGE">
+    </form>
     </div>
+
     <div class="informtaion">
         <h1>Offices</h1>
         <ul>

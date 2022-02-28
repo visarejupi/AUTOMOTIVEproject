@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -64,33 +65,50 @@
 <div class="navbar">
    <ul class="nav-items">     
       <?php
-      $page = 'signup';
+      $page = 'contact';
       include ('includes/header.php');
       ?>
    </ul>
 </div>
 </div>
-</header><main>
-  <div class="login">
-  <div class="container"> 
-  <form class="signup_form" name="signup_form" action="/register.php">  
-    <div class="form_container">
-      <h1>Sign up</h1> 
-      <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  
-      <p id="nameError"></p>
-      <input autocomplete="off" type="email" placeholder="Email" name="email" id="email" required >  
-      <p id="emailError"></p>
-      <input autocomplete="off" type="password" placeholder="Password" name="password" id="password" >  
-      <p id="passError"></p>
-      <input autocomplete="off" type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" >  
-      <p id="confirmpassError"></p>
-      <button type="submit" class="success" id="signup" name="signup">Sign up</button>   
-      </div>
-     </form> 
-     <script src="js/signUpValidate.js"></script>
+</header>
+<main>
+<div class="container">
+<br><br><br><br><br><br>
 
-    </div>   
-  </div>
-</main>
+  <div class="insert">
+<?php  $conn = mysqli_connect("localhost", "root", "", "automotive");
+       
+        $name =  $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $subject =  $_REQUEST['subject'];
+        $message = $_REQUEST['message'];
+          
+
+        $sql = "INSERT INTO contact_form  (name, email, subject, message) VALUES ('$name', '$email','$subject','$message')";
+          
+        if(mysqli_query($conn, $sql)){
+            echo "<h3>Thank you ".$name." for your feedback, <BR>
+                   we will contact you soon!</h3> "; 
+  
+            echo nl2br("<p><strong>Name: </strong>$name\n <strong>Email: </strong>$email\n "
+                ."<strong>Subject: </strong>$subject\n <strong>Message: </strong>$message </p>");
+        } else{
+            echo "ERROR: Hush! Sorry $sql. " 
+                . mysqli_error($conn);
+        }
+          
+        // Close connection
+        mysqli_close($conn);
+        ?>
+  
+    </div>
+    </div>
+
+    </main>
 </body>
+<?php
+include 'includes/footer.php';
+?>
+ </body>
 </html>

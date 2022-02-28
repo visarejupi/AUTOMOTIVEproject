@@ -59,4 +59,5 @@ switch ($page) {
 }
 include ('includes/db.php');
 include ('includes/autharize.php');
+
 ?>

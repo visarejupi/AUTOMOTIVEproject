@@ -24,7 +24,7 @@
       src="https://kit.fontawesome.com/54319c4285.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="icon
     "

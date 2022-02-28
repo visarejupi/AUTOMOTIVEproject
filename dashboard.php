@@ -64,33 +64,94 @@
 <div class="navbar">
    <ul class="nav-items">     
       <?php
-      $page = 'signup';
+      $page = 'index';
       include ('includes/header.php');
       ?>
    </ul>
 </div>
 </div>
-</header><main>
-  <div class="login">
-  <div class="container"> 
-  <form class="signup_form" name="signup_form" action="/register.php">  
-    <div class="form_container">
-      <h1>Sign up</h1> 
-      <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  
-      <p id="nameError"></p>
-      <input autocomplete="off" type="email" placeholder="Email" name="email" id="email" required >  
-      <p id="emailError"></p>
-      <input autocomplete="off" type="password" placeholder="Password" name="password" id="password" >  
-      <p id="passError"></p>
-      <input autocomplete="off" type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" >  
-      <p id="confirmpassError"></p>
-      <button type="submit" class="success" id="signup" name="signup">Sign up</button>   
-      </div>
-     </form> 
-     <script src="js/signUpValidate.js"></script>
+</header>
 
-    </div>   
-  </div>
+<main>
+<div class="container">
+<br><br><br><br><br><br>
+
+<?php
+if ($privileges==0) {
+  echo "<h2 class=\"dashboard_h2\">Welcome back, <b>Admin</b></h2>";
+}
+
+?>
+
+<div class="add_new_car">
+  
+    <p class="title"> Add new car</p>
+        
+ 
+
+</div>
+
+<div class="delete_car">
+    <p class="title">Delete car by ID</p>
+</div>
+
+<div  class="feedbacks">
+    <p class="title">Feedbacks</p>
+<?php
+$stmt = $conn->prepare("SELECT * from contact_form LIMIT 10");
+$stmt->execute();
+
+// set the resulting array to associative
+
+?>
+<table id="feedback">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+
+<?php
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+foreach($stmt as $contact_forms=>$contact_form) {
+    ?>
+    <tr id="alt">
+    <td><?php echo $contact_form['id'];?></td>
+    <td><?php echo $contact_form['name'];?></td>
+    <td><?php echo $contact_form['email'];?></td>
+    <td><?php echo $contact_form['subject'];?></td>
+    <td><?php echo $contact_form['message'];?></td>
+    </tr>
+<?php
+}
+?>
+</table>
+<br><br><br><br><br><br>
+
+</div>
+</div>
 </main>
+
+<?php
+  include 'includes/footer.php';
+  ?>
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
+
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2200
+
+      });
+    });
+  </script>
+
+<!-- SLIDER CODE HERE!! -->
+
+
 </body>
 </html>
