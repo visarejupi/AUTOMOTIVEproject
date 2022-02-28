@@ -64,7 +64,7 @@
 <div class="navbar">
    <ul class="nav-items">     
       <?php
-      $page = 'contact';
+      $page = 'index';
       include ('includes/header.php');
       ?>
    </ul>
@@ -72,53 +72,86 @@
 </div>
 </header>
 
-
-<iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5165539.318362727!2d5.862074988857897!3d50.789734843687654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc39d5bc6109%3A0x27bfcdae48c5d5a0!2sVolkswagen%20Automobile%20Stuttgart%20GmbH!5e0!3m2!1sen!2s!4v1633884564449!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+<main>
 <div class="container">
-    <div class="form">
-    <div class="contactform">
-    <form action="insert.php" method="post">
-        <H1>Contact Us</H1>
-        <p>Sign a partnership with us, drop us a letter.</p>
-        <input type="text" name="name" id="name" placeholder="Name">
-        <input type="email" name="email" id="email" placeholder="Email">
-        <input type="text" name="subject" id="subject" placeholder="Subject">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-        <input type="submit" name="submit" id="submit" value="SEND MESSAGE">
-    </form>
-    </div>
+<br><br><br><br><br><br>
 
-    <div class="informtaion">
-        <h1>Offices</h1>
-        <ul>
-            <li>
-            Visit our offices, or call us.
-        </li>
-        </ul>
-        <h3>Address</h3>
-        <ul>
-            <li>Kalium Automotive</li>
-            <li>44-45 Hythe Rd,</li>
-            <li>White City</li>
-            <li>United Kingdom</li>
-        </ul>
-        <hr>
-        <h3>Phone:</h3>
-        <ul>
-        <li>+44 20 10524 5001</li>
-        <li>+44 15 12699 4003</li>
-    </ul>
-    <hr>
-    <h3>E-mail:</h3>
-    <ul>
-    <li>info@cardealership.co.uk</li>
-</ul>
-    </div>
-</div>
-</div>
 <?php
-include 'includes/footer.php';
+if ($privileges==0) {
+  echo "<h2 class=\"dashboard_h2\">Welcome back, <b>Admin</b></h2>";
+}
+
 ?>
- </body>
+
+<div class="add_new_car">
+  
+    <p class="title"> Add new car</p>
+        
+ 
+
+</div>
+
+<div class="delete_car">
+    <p class="title">Delete car by ID</p>
+</div>
+
+<div  class="feedbacks">
+    <p class="title">Feedbacks</p>
+<?php
+$stmt = $conn->prepare("SELECT * from contact_form LIMIT 10");
+$stmt->execute();
+
+// set the resulting array to associative
+
+?>
+<table id="feedback">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+
+<?php
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+foreach($stmt as $contact_forms=>$contact_form) {
+    ?>
+    <tr id="alt">
+    <td><?php echo $contact_form['id'];?></td>
+    <td><?php echo $contact_form['name'];?></td>
+    <td><?php echo $contact_form['email'];?></td>
+    <td><?php echo $contact_form['subject'];?></td>
+    <td><?php echo $contact_form['message'];?></td>
+    </tr>
+<?php
+}
+?>
+</table>
+<br><br><br><br><br><br>
+
+</div>
+</div>
+</main>
+
+<?php
+  include 'includes/footer.php';
+  ?>
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
+
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2200
+
+      });
+    });
+  </script>
+
+<!-- SLIDER CODE HERE!! -->
+
+
+</body>
 </html>

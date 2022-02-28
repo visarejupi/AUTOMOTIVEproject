@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -71,52 +72,41 @@
 </div>
 </div>
 </header>
-
-
-<iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5165539.318362727!2d5.862074988857897!3d50.789734843687654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc39d5bc6109%3A0x27bfcdae48c5d5a0!2sVolkswagen%20Automobile%20Stuttgart%20GmbH!5e0!3m2!1sen!2s!4v1633884564449!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+<main>
 <div class="container">
-    <div class="form">
-    <div class="contactform">
-    <form action="insert.php" method="post">
-        <H1>Contact Us</H1>
-        <p>Sign a partnership with us, drop us a letter.</p>
-        <input type="text" name="name" id="name" placeholder="Name">
-        <input type="email" name="email" id="email" placeholder="Email">
-        <input type="text" name="subject" id="subject" placeholder="Subject">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-        <input type="submit" name="submit" id="submit" value="SEND MESSAGE">
-    </form>
+<br><br><br><br><br><br>
+
+  <div class="insert">
+<?php  $conn = mysqli_connect("localhost", "root", "", "automotive");
+       
+        $name =  $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $subject =  $_REQUEST['subject'];
+        $message = $_REQUEST['message'];
+          
+
+        $sql = "INSERT INTO contact_form  (name, email, subject, message) VALUES ('$name', '$email','$subject','$message')";
+          
+        if(mysqli_query($conn, $sql)){
+            echo "<h3>Thank you ".$name." for your feedback, <BR>
+                   we will contact you soon!</h3> "; 
+  
+            echo nl2br("<p><strong>Name: </strong>$name\n <strong>Email: </strong>$email\n "
+                ."<strong>Subject: </strong>$subject\n <strong>Message: </strong>$message </p>");
+        } else{
+            echo "ERROR: Hush! Sorry $sql. " 
+                . mysqli_error($conn);
+        }
+          
+        // Close connection
+        mysqli_close($conn);
+        ?>
+  
+    </div>
     </div>
 
-    <div class="informtaion">
-        <h1>Offices</h1>
-        <ul>
-            <li>
-            Visit our offices, or call us.
-        </li>
-        </ul>
-        <h3>Address</h3>
-        <ul>
-            <li>Kalium Automotive</li>
-            <li>44-45 Hythe Rd,</li>
-            <li>White City</li>
-            <li>United Kingdom</li>
-        </ul>
-        <hr>
-        <h3>Phone:</h3>
-        <ul>
-        <li>+44 20 10524 5001</li>
-        <li>+44 15 12699 4003</li>
-    </ul>
-    <hr>
-    <h3>E-mail:</h3>
-    <ul>
-    <li>info@cardealership.co.uk</li>
-</ul>
-    </div>
-</div>
-</div>
+    </main>
+</body>
 <?php
 include 'includes/footer.php';
 ?>

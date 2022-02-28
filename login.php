@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="login.js"></script>
     <script
       src="https://kit.fontawesome.com/54319c4285.js"
       crossorigin="anonymous"
@@ -86,7 +87,7 @@
       <p>Don't have an account? <a href="signup.php"> Create one </a>  </p> 
       </div>
      </form> 
-     <script src="js/loginValidate.js"></script>
+     <script src="js/login.js"></script>
     </div>   
   </div>
 </main>
