@@ -1,18 +1,32 @@
 <main>
-    <div class="login">
-    <div class="container"> 
-    <form class="login_form" name="form" action="./authenticate.php" >  
-      <div class="form_container">
-        <h1>Log in</h1> 
-        <input autocomplete="off" type="text" placeholder="Username" name="username" id="username" >  
-        <p id="nameError"></p>
-        <input autocomplete="off" type="password" placeholder="Password" name="password" id="password" >  
-        <p id="passError"></p>
-        <button type="submit" class="success">Login</button>   
-        <p>Don't have an account? <a href="signup.php"> Create one </a>  </p> 
+  <div class="login">
+    <div class="container">
+      <form class="login_form" name="form" action="./authenticate.php">
+        <div class="form_container">
+          <h1>Log in</h1>
+          <input
+            autocomplete="off"
+            type="text"
+            required
+            placeholder="Username"
+            name="username"
+            id="username"
+          />
+          <p id="nameError"></p>
+          <input
+            autocomplete="off"
+            type="password"
+            required
+            placeholder="Password"
+            name="password"
+            id="password"
+          />
+          <p id="passError"></p>
+          <button type="submit" class="success">Login</button>
+          <p>Don't have an account? <a href="signup.php"> Create one </a></p>
         </div>
-       </form> 
-       <script src="js/login.js"></script>
-      </div>   
+      </form>
+      <script src="js/login.js"></script>
     </div>
-  </main>
+  </div>
+</main>
