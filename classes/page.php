@@ -16,7 +16,7 @@ class page {
     public function join() {
         $joined="$this->static_content";
         foreach ($this->dynamic_content as $key => $value) {
-            $joined=preg_replace("<<<<<".$key.">>>>>", $value, $this->static_content);
+            $joined=preg_replace("<<<<<".$key.">>>>>", $value, $joined);
         }
         return $joined;
     }
