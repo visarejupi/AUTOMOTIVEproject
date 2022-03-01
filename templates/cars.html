@@ -25,62 +25,88 @@
   </script>
   </ul>
 <ul class="aside" id="categories">
+  <style>
+    ul#categories li { /*input[type=radio].category*/
+      background-color: #f0f0f0;
+      cursor: pointer;
+      border-right: 2px solid #e32636;
+    } 
+    input.category {
+      display:none;
+    }
+
+  </style>
   <h3 class="title">CATEGORIES</h3>
-  <li><a><img src="images/cars/cartypes/MICRO.svg" alt="" width="45" style="height: 18px;">Small</a></li>
-  <li><a><img src="images/cars/cartypes/HATCHBACK1.svg" alt="" width="45">Hatchback</a></li>
-  <li><a><img src="images/cars/cartypes/MINIVAN1.svg" alt="" width="45">Minivan</aimg></li>
-  <li><a><img src="images/cars/cartypes/CUV.svg" alt="" width="45">Estate</a></li>
-  <li><a><img src="images/cars/cartypes/SEDAN.svg" alt="" width="45">Sedan</a></li>
-  <li><a><img src="images/cars/cartypes/SUPERCAR.svg" alt="" width="45">Sport</a></li>
-  <li><a><img src="images/cars/cartypes/SUV1.svg" alt="" width="45">SUV</a></li>
+  <li>
+    <label for="small"><input class="category" type="radio"  id="small" name="category" value="1"><a><img src="images/cars/cartypes/MICRO.svg" alt="" width="45" style="height: 18px;">Small</a></input></label>
+  </li>
+  <li>
+    <label for="hatchback"><input class="category" type="radio"  id="hatchback" name="category" value="2"><a><img src="images/cars/cartypes/HATCHBACK1.svg" alt="" width="45">Hatchback</a></input></label>
+  </li>
+  <li>
+    <label for="minivan"><input class="category" type="radio"  id="minivan" name="category" value="3"><a><img src="images/cars/cartypes/MINIVAN1.svg" alt="" width="45">Minivan</a></input></label>
+  </li>
+  <li>
+    <label for="estate"><input class="category" type="radio"  id="estate" name="category" value="4"><a><img src="images/cars/cartypes/CUV.svg" alt="" width="45">Estate</a></input></label>
+  </li>
+  <li>
+    <label for="sedan"><input class="category" type="radio"  id="sedan" name="category" value="7"><a><img src="images/cars/cartypes/SEDAN.svg" alt="" width="45">Sedan</a></input></label>
+  </li>
+  <li>
+    <label for="sport"><input class="category" type="radio"  id="sport" name="category" value="5"><a><img src="images/cars/cartypes/SUPERCAR.svg" alt="" width="45">Sport</a></input></label>
+  </li>
+  <li>
+    <input type="radio"  id="suv" name="category" value="6" style="display:none">
+    <label for="suv"><input type="radio"  id="suv" name="category" value="6" style="display:none"><a><img src="images/cars/cartypes/SUV1.svg" alt="" width="45">SUV</a></label>
+  </li>
 </ul>
 <ul class="aside" id="fuel">
   <h3 class="title">FUEL</h3>
   <li>
-  <input type="checkbox" id="diesel">
+  <input type="radio" id="diesel" name="fuel" value="diesel">
   <label for="diesel" id="f">Diesel</label>
-  <input type="checkbox" id="petrol">
+  <input type="radio" id="petrol" name="fuel" value="petrol">
   <label for="petrol">Petrol</label>
 </li>
 <li>
-  <input type="checkbox" id="hybrid">
+  <input type="radio" id="hybrid" name="fuel" value="hybrid">
   <label for="hybrid">Hybrid</label>
-  <input type="checkbox" id="electric">
+  <input type="radio" id="electric" name="fuel" value="electric">
   <label for="electric">Electric</label>
 </li>
 </ul>
 <ul class="aside" id="doors">
   <h3 class="title">DOORS</h3>
   <li>
-    <input type="checkbox"  id="2/3">
+    <input type="radio"  id="2/3" name="doors" value="2/3">
     <label for="2/3">2/3</label>
-    <input type="checkbox" id="4/5">
+    <input type="radio" id="4/5" name="doors" value="4/5">
     <label for="4/5">4/5</label>
-    <input type="checkbox" id="6/7">
+    <input type="radio" id="6/7" name="doors" value="6/7">
     <label for="6/7">6/7</label>
   </li>
 </ul>
 <ul class="aside" id="transmission">
   <h3 class="title">TRANSMISSION</h3>
   <li>
-    <input type="checkbox" id="automatic">
+    <input type="radio" id="automatic" name="transmission" value="automatic">
     <label for="automatic">Automatic</label>
-    <input type="checkbox" id="manual">
+    <input type="radio" id="manual" name="transmission" value="automatic">
     <label for="manual">Manual</label>
   </li>
 </ul>
 <ul class="aside" id="drivetrain">
   <h3 class="title">DRIVETRAIN</h3>
   <li>
-    <input type="checkbox" id="awd">
+    <input type="radio" id="awd" name="drivetrain" value="awd">
     <label for="awd">AWD (All Wheel Drive)</label>
   </li>
   <li>
-    <input type="checkbox" id="fwd">
+    <input type="radio" id="fwd" name="drivetrain" value="fwd">
     <label for="fwd">FWD (Fear Wheel Drive)</label>
   </li>  
   <li>
-    <input type="checkbox" id="rwd">
+    <input type="radio" id="rwd" name="drivetrain" value="rwd">
     <label for="rwd">RWD (Rear Wheel Drive)</label>
   </li>
 </ul>
