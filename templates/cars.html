@@ -11,7 +11,7 @@
   <h3 class="title">PRICE</h3>
 
   <div class="slidecontainer">
-  <input type="range" min="10000" max="150000" value="75000" step="10000" class="slider_price" id="myRange">
+  <input type="range" min="10000" max="150000" name="price" value="75000" step="10000" class="slider_price" id="myRange">
   </div>
   <label for="myRange" id="demo"></label>
   <script>
@@ -26,40 +26,33 @@
   </ul>
 <ul class="aside" id="categories">
   <style>
-    /*input[type=radio].category*/
-    /* ul#categories li {
+    input.category {
+      display:none;
+    }
+    input.category:checked li {
       background-color: #f0f0f0;
       cursor: pointer;
       border-right: 2px solid #e32636;
-    }  */
-    input.category {
-      display:none;
+    }
+    input li {
+      background-color: #000000;
     }
 
   </style>
   <h3 class="title">CATEGORIES</h3>
-  <li>
-    <label for="small"><input class="category" type="radio"  id="small" name="category" value="1"><a><img src="images/cars/cartypes/MICRO.svg" alt="" width="45" style="height: 18px;">Small</a></input></label>
-  </li>
-  <li>
-    <label for="hatchback"><input class="category" type="radio"  id="hatchback" name="category" value="2"><a><img src="images/cars/cartypes/HATCHBACK1.svg" alt="" width="45">Hatchback</a></input></label>
-  </li>
-  <li>
-    <label for="minivan"><input class="category" type="radio"  id="minivan" name="category" value="3"><a><img src="images/cars/cartypes/MINIVAN1.svg" alt="" width="45">Minivan</a></input></label>
-  </li>
-  <li>
-    <label for="estate"><input class="category" type="radio"  id="estate" name="category" value="4"><a><img src="images/cars/cartypes/CUV.svg" alt="" width="45">Estate</a></input></label>
-  </li>
-  <li>
-    <label for="sedan"><input class="category" type="radio"  id="sedan" name="category" value="7"><a><img src="images/cars/cartypes/SEDAN.svg" alt="" width="45">Sedan</a></input></label>
-  </li>
-  <li>
-    <label for="sport"><input class="category" type="radio"  id="sport" name="category" value="5"><a><img src="images/cars/cartypes/SUPERCAR.svg" alt="" width="45">Sport</a></input></label>
-  </li>
-  <li>
-    <input type="radio"  id="suv" name="category" value="6" style="display:none">
-    <label for="suv"><input type="radio"  id="suv" name="category" value="6" style="display:none"><a><img src="images/cars/cartypes/SUV1.svg" alt="" width="45">SUV</a></label>
-  </li>
+    <label for="small"><input class="category" type="radio"  id="small" name="category" value="1"><li><a><img src="images/cars/cartypes/MICRO.svg" alt="" width="45" style="height: 18px;">Small</a></li></input></label>
+
+    <label for="hatchback"><input class="category" type="radio"  id="hatchback" name="category" value="2"><li><a><img src="images/cars/cartypes/HATCHBACK1.svg" alt="" width="45">Hatchback</a></li></input></label>
+
+    <label for="minivan"><input class="category" type="radio"  id="minivan" name="category" value="3"><li><a><img src="images/cars/cartypes/MINIVAN1.svg" alt="" width="45">Minivan</a></li></input></label>
+
+    <label for="estate"><input class="category" type="radio"  id="estate" name="category" value="4"><li><a><img src="images/cars/cartypes/CUV.svg" alt="" width="45">Estate</a></li></input></label>
+
+    <label for="sedan"><input class="category" type="radio"  id="sedan" name="category" value="7"><li><a><img src="images/cars/cartypes/SEDAN.svg" alt="" width="45">Sedan</a></li></input></label>
+
+    <label for="sport"><input class="category" type="radio"  id="sport" name="category" value="5"><li><a><img src="images/cars/cartypes/SUPERCAR.svg" alt="" width="45">Sport</a></li></input></label>
+
+    <label for="suv"><input class="category" type="radio"  id="suv" name="category" value="6"><li><a><img src="images/cars/cartypes/SUV1.svg" alt="" width="45">SUV</a></li></input></label>
 </ul>
 <ul class="aside" id="fuel">
   <h3 class="title">FUEL</h3>
