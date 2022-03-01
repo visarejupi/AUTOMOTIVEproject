@@ -1,25 +1,13 @@
 <?php
 
-include "classes/page.php";
-include "classes/site.php";
-include "includes/db.php";
+include "includes/preload.php";
 
-$header = "includes/header.php";
-$footer = "includes/footer.php";
+if ($site->privileges > 0) {
+  header("Location: index.php");
+  exit();
+}
 
-$site = new site($conn, $header, $footer);
-
-$static_content = file_get_contents("templates/dashboard.html");
-$dynamic_content = array();
-
-$feedback = "<table id=\"feedback\">
-<th>ID</th>
-<th>Name</th>
-<th>Email</th>
-<th>Subject</th>
-<th>Message</th>
-<th>Date posted</th>";
-
+$feedback = "";
 
 try {
   $stmt = $conn->prepare("SELECT * from contact_form LIMIT 10");
@@ -36,15 +24,11 @@ try {
       <td>".$contact_form['date_posted']."</td>
 
       </tr>";
-
   }
 }
 catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
-
-$feedback .= "</table>
-<br><br><br><br><br><br>";
 
 $dynamic_content["feedback"]=$feedback;
 

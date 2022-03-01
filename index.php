@@ -1,16 +1,6 @@
 <?php
 
-include "classes/page.php";
-include "classes/site.php";
-include "includes/db.php";
-
-$header = "includes/header.php";
-$footer = "includes/footer.php";
-
-$site = new site($conn, $header, $footer);
-
-$static_content = file_get_contents("templates/index.html");
-$dynamic_content = array();
+include "includes/preload.php";
 
 $welcome_message = "";
 if ($site->privileges==0) {
