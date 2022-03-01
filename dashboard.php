@@ -17,7 +17,9 @@ $feedback = "<table id=\"feedback\">
 <th>Name</th>
 <th>Email</th>
 <th>Subject</th>
-<th>Message</th>";
+<th>Message</th>
+<th>Date posted</th>";
+
 
 try {
   $stmt = $conn->prepare("SELECT * from contact_form LIMIT 10");
@@ -31,6 +33,8 @@ try {
       <td>".$contact_form['email']."</td>
       <td>".$contact_form['subject']."</td>
       <td>".$contact_form['message']."</td>
+      <td>".$contact_form['date_posted']."</td>
+
       </tr>";
 
   }

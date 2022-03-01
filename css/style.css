@@ -180,6 +180,18 @@ footer {
   text-decoration: none;
   color: #16161d;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3 ease-in-out;
+  background-color: #212121;
+}
 .navbar li a {
   margin: 10px;
   font-size: 15px;
@@ -853,4 +865,260 @@ h3 {
 #alt {
   font-size: 14px;
   background-color: #e3e5e5;
+}
+/*RESPONSIVE DESIGN for iphone 12pro */
+
+/*HEADER PART */
+
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .topheader {
+    display: none;
+    margin: 0;
+  }
+  .header_content {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    align-items: baseline;
+    height: auto;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav_logo {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-bottom: -15%;
+    margin-top: -10%;
+    padding-bottom: 15px;
+    margin-left: 15px;
+  }
+  .nav_logo img {
+    margin-left: 28%;
+  }
+  .navbar {
+    width: 100%;
+    text-align: left;
+    padding-left: 1%;
+    padding-bottom: 2%;
+    background-color: whitesmoke;
+    padding-top: 2%;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-items {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transform: 0.3s;
+  }
+  .nav_link {
+    margin: 16px 0;
+  }
+  .nav-items.active {
+    left: 0;
+  }
+}
+
+/*FOOTER PART*/
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .upperfooter {
+    display: flex;
+    flex-direction: column;
+  }
+  .upperfooter .col1 {
+    padding: 10px 20px;
+  }
+  .mainfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    text-align: center;
+    font-size: 9px;
+    padding: 10px 10px;
+  }
+  .right i {
+    font-size: 10px;
+  }
+  .left {
+    display: none;
+  }
+}
+
+/*SERVICES PART */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  #servicesbanner img {
+    margin-top: 4%;
+    width: 100%;
+    height: 150px;
+  }
+  #servicesbanner p {
+    margin-top: -17%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 45px;
+  }
+  #servicesbanner h1 {
+    display: none;
+  }
+  .services_content {
+    display: inline-table;
+    margin-left: -15%;
+  }
+  .serviceimg img {
+    width: 150px;
+  }
+  .serviceimg {
+    width: 50%;
+  }
+  .service_text p,
+  .service_text li {
+    font-size: 12px;
+  }
+}
+/*LOGIN PART */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .form_container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: -25%;
+  }
+  .form_container input[type='text'],
+  .form_container input[type='password'],
+  .form_container input[type='email'] {
+    border-radius: 5px;
+    border: 2px solid #d6d6d6;
+    width: 125%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin: 15px 0;
+    margin-left: -23%;
+  }
+}
+/*CONTACT PART */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .informtaion {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .contactform input[type='submit'] {
+    width: auto;
+  }
+}
+/*CARS PART */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  .carstitle {
+    margin-top: 12%;
+    font-size: 14px;
+  }
+  .carsp {
+    font-size: 13px;
+  }
+  .aside {
+    width: 80%;
+    margin-left: -5px;
+  }
+  .aside h3 {
+    font-size: 13px;
+  }
+  .aside p {
+    font-size: 13px;
+  }
+  #categories li a {
+    font-size: 12px;
+    justify-content: left;
+  }
+  #categories li a img {
+    width: 22%;
+  }
+  #fuel li {
+    display: flex;
+    flex-direction: column;
+  }
+  #doors li {
+    display: flex;
+    flex-direction: column;
+  }
+  #transmission li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cars img {
+    width: 180px;
+  }
+  #cars > #box {
+    width: 180px;
+  }
+}
+
+/*index PART */
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+  #optform {
+    display: flex;
+    flex-direction: column;
+    left: 0%;
+    clear: both;
+    margin-left: 10%;
+  }
+  #optform h2 {
+    font-size: 13px;
+  }
+  #optform p {
+    font-size: 12px;
+  }
+  #optform a {
+    font-size: 12px;
+    width: 50%;
+    margin-top: 20%;
+    margin-bottom: -25%;
+    margin-left: 15%;
+  }
+  #selectionform {
+    display: flex;
+    flex-direction: column;
+  }
+  .terms {
+    margin-top: 200%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 100%;
+  }
+  .terms_items {
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+  }
 }

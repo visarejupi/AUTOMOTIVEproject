@@ -65,6 +65,12 @@
    <ul class="nav-items">
        <?php include "includes/navigation_bar.php"; ?>     
    </ul>
+   <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+   </div>
 </div>
 </div>
 </header>
+<script src="js/hamburger.js"></script>

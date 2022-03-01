@@ -21,9 +21,9 @@ switch ($_SERVER["REQUEST_URI"]) {
       break;   
     	
 }
-echo "<li><a $active_home href=\"index.php\">HOME</a></li>
-      <li><a $active_cars href=\"cars.php\">CARS</a></li>
-      <li><a $active_services href=\"services.php\">SERVICES</a></li>
-      <li><a $active_contact href=\"contact.php\">CONTACT</a></li>
-      <li><a $active_login href=\"login.php\">LOG IN</a><i class=\"far fa-user user\"></i></li>";
+echo "<li><a class=\"nav_links\" $active_home href=\"index.php\">HOME</a></li>
+      <li><a class=\"nav_links\" $active_cars href=\"cars.php\">CARS</a></li>
+      <li><a class=\"nav_links\" $active_services href=\"services.php\">SERVICES</a></li>
+      <li><a class=\"nav_links\" $active_contact href=\"contact.php\">CONTACT</a></li>
+      <li><a class=\"nav_links\" $active_login href=\"login.php\">LOG IN</a><i class=\"far fa-user user\"></i></li>";
 ?>
