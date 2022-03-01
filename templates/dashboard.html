@@ -7,7 +7,24 @@
 <div class="add_new_car">
   
     <p class="title"> Add new car</p>
-
+    <div class="contactform">
+        <form action="add_car.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="car_type" placeholder="Type" required>
+            <input type="text" name="price" placeholder="Price" required>
+            <input type="text" name="buildyear" placeholder="Build Year">
+            <input type="text" name="firstregistration" placeholder="First Registration">
+            <input type="text" name="odometerreading" placeholder="Odometer Reading">
+            <input type="text" name="cylindercapacity" placeholder="Cylinder Capacity">
+            <input type="text" name="transmission" placeholder="Transmission">
+            <input type="text" name="fueltype" placeholder="Tuel Type">
+            <input type="text" name="doors" placeholder="Doors">
+            <input type="text" name="drivetrain" placeholder="Drivetrain">
+            <input type="text" name="horsepower" placeholder="Horsepower">
+            <input type="file" accept="image/*" name="picture_location" placeholder="Picture Location" required>
+            <input type="submit" name="submit" id="submit" value="ADD CAR">
+        </form>
+    </div>
     
 </div>
 

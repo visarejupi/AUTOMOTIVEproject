@@ -3,7 +3,7 @@
 include "auth.php";
 
 class site {
-    private $db_conn;
+    public $db_conn;
     private $page;
     private $header;
     private $footer;
